@@ -15,7 +15,7 @@ app.use(
   cors({
     origin:
       process.env.NODE_ENV === "production"
-        ? "your-frontend-domain.com" // Replace with your actual frontend domain
+        ? process.env.FRONTEND_URL
         : "http://localhost:3000",
   })
 );
